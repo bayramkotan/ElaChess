@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3DEEF55-8960-4C84-9B15-E9AB7C67B66E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElaChess</RootNamespace>
+    <AssemblyName>ElaChess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\bayram\AppData\Roaming\ICSharpCode\SharpDevelop5\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moves.cs" />
+    <Compile Include="newGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="newGame.Designer.cs">
+      <DependentUpon>newGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="newGame.resx">
+      <DependentUpon>newGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\DeleteHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\GoToNextHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\GoToPrevious.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\NewDocumentHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\openHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resource\saveHS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\acik.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-at.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-fil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-kale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-piyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-sah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\b-vezir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\koyu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-at.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-fil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-kale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-piyon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-sah.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\s-vezir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\tahta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\taslar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\bb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\bk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\bn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\board.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\bp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\bq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\br.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\letterSide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\light.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\numberSide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\pieces.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wq.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\pictures\wr.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
